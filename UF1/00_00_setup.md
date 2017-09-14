@@ -12,6 +12,10 @@ suportar UWP com a mínim cal seleccionar els següents:
  
 ## Activació del mode de programador
 Activeu el mode de programador per tal que el windows 10 sigui capaç d'executar aplicacions UWP que no estiguin
-a la Microsoft Store
+a la Microsoft Store.
+
+Aneu a Panel de control > Actualización y seguridad > Para programadores
+
+Activeu  el mode de programador:
 
 ![alt text](./images/modo_programador.png "Modo programador")
