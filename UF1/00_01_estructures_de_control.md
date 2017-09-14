@@ -30,9 +30,9 @@
 	}
  ```
  ### if condensat
- …s una estructura  if molt compacta:
+ √âs una estructura  if molt compacta:
  ```
- [ condiciÛ lÚgica ] ? [acciÛ si la condiciÛ Ès certa ] : [ acciÛ si Ès falsa ] ;
+ [ condici√≥ l√≤gica ] ? [acci√≥ si la condici√≥ √©s certa ] : [ acci√≥ si √©s falsa ] ;
  ```
  Un exemple:
  
@@ -40,11 +40,11 @@
 	 a==3? a++: a--;
  ```
  ### switch
- …s igual que a C, perÚ amb algunes peculiaritats:
-  *  ens forÁa a posar _break_ ( evita errors )
+ √âs igual que a C, per√≤ amb algunes peculiaritats:
+  *  ens for√ßa a posar _break_ ( evita errors )
   *  podem fer _goto_
  
- Un exemple b‡sic:
+ Un exemple b√†sic:
  
 ```c#
 int nota = 5;
@@ -61,7 +61,7 @@ string notaDescriptiva ;
 		break;
 	  case 9:
 	  case 10:
-		notaDescriptiva = "Excel∑lent";
+		notaDescriptiva = "Excel¬∑lent";
 		break;
 	  default:
 		notaDescriptiva = "Insuficient";
@@ -84,7 +84,7 @@ int nota;
 	  case  "Notable":
 	  nota = 7;
 		break;
-	  case  "Excel∑lent":
+	  case  "Excel¬∑lent":
 	  nota = 9;
 		break;
 	  default:
@@ -121,15 +121,15 @@ switch(pais)
 
  ## Taules
  
- C# ens permet definir taules est‡tiques:
+ C# ens permet definir taules est√†tiques:
   ```c#
-             // exemple de taula amb inicialitzaciÛ
+             // exemple de taula amb inicialitzaci√≥
             int[] numeros= { 1, 6, 7, 10 };
 
-            // podem fer taules de tipus mÈs complexes, com cadenes
+            // podem fer taules de tipus m√©s complexes, com cadenes
             string[] persones = { "Maria", "Berta", "Joan" };
 
-            // creaciÛ d'una taula indicant dimensions, que s'omplir‡
+            // creaci√≥ d'una taula indicant dimensions, que s'omplir√†
             // amb el valor per defecte del tipus de dades ( 0 en aquest cas )
             double[] temperatures = new double[10];
   ```
@@ -139,7 +139,7 @@ switch(pais)
 > for (initializer; condition; iterator):
 >        statement(s)
   Funciona igual que a C.
-  Iterador cl‡ssic
+  Iterador cl√†ssic
 ```c#
 int suma = 0;
 int i ;
@@ -148,7 +148,7 @@ for ( i = 0; i < 100; i++)
   suma += i;
 }
 ```
-Iterador amb declaraciÛ incorporada
+Iterador amb declaraci√≥ incorporada
 ```c#
 int suma = 0;
 for (int i = 0; i < 100; i++)
