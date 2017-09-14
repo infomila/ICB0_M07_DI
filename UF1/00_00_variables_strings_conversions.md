@@ -1,17 +1,17 @@
 [ ... back  ]( ../README.md)
 
-# Introducció al llenguatge C# :coffee:
+# IntroducciÃ³ al llenguatge C# :coffee:
 
 ## Comentaris
 ```c#
-	 //  comentari monolínea
+	 //  comentari monolÃ­nea
 	 /*   
-	   comentari multilínia
+	   comentari multilÃ­nia
 	 */
  ```
  
  
-## Missatges de depuració
+## Missatges de depuraciÃ³
 Per mostrar missatges de debug , que es poden trobar a la finestra _Salida_o _Output_ de Visual Studio ),
 cal usar la comanda _Debug_WriteLine("MISSATGE")_
 
@@ -23,10 +23,10 @@ cal usar la comanda _Debug_WriteLine("MISSATGE")_
 ##  Sortida / Entrada per consola
 
 
->NOTA: _System.Console_ és la classe que cal utilitzar per escriure a consola.
+>NOTA: _System.Console_ Ã©s la classe que cal utilitzar per escriure a consola.
 >
 >   * Si useu WPF + .NET Framework  es pot fer servir immediatament.
-> * Si useu Universal Apps + .NET Core, cal que carregueu el mòdul de consola. Això ho podeu fer editant l'arxiu _project.json_ i afegint la part que es mostra més a sota entre comentaris:
+> * Si useu Universal Apps + .NET Core, cal que carregueu el mÃ²dul de consola. AixÃ² ho podeu fer editant l'arxiu _project.json_ i afegint la part que es mostra mÃ©s a sota entre comentaris:
 ```
 {
   "dependencies": {
@@ -53,7 +53,7 @@ cal usar la comanda _Debug_WriteLine("MISSATGE")_
 }
 ```
 
-Els següent exemple mostra l'utilització de la consola:
+Els segÃ¼ent exemple mostra l'utilitzaciÃ³ de la consola:
 
 ```c#
 	// Escrivint per consola
@@ -87,23 +87,23 @@ Les variables de tipus primitius es desen a la pila.
 
  Name |	.NET Type 	   |Description 	               |Range (min:max)
  -------- | ------------------|-----------------------------|-----------------------------
- sbyte 	|System.SByte 	|8-bit signed integer    	|-128:127 (-27:27–1)
- short 	|System.Int16 	|16-bit signed integer 	|-32,768:32,767 (-215:215–1)
- int 	    | System.Int32 	|32-bit signed integer 	|-2,147,483,648:2,147,483,647 (-231:231–1)
- long 	|System.Int64 	|64-bit signed integer 	|-9,223,372,036,854,775,808: 9,223,372,036,854,775,807 (-263:263–1)
- byte 	|System.Byte 	   |8-bit unsigned integer 	|  0:255 (0:28–1)
- ushort 	|System.UInt16 |16-bit unsigned integer |  0:65,535 (0:216–1)
- uint 	   |System.UInt32 	|32-bit unsigned integer|	0:4,294,967,295 (0:232–1)
- ulong 	|System.UInt64 |64-bit unsigned integer |   0:18,446,744,073,709,551,615 (0:264–1)
+ sbyte 	|System.SByte 	|8-bit signed integer    	|-128:127 (-27:27â€“1)
+ short 	|System.Int16 	|16-bit signed integer 	|-32,768:32,767 (-215:215â€“1)
+ int 	    | System.Int32 	|32-bit signed integer 	|-2,147,483,648:2,147,483,647 (-231:231â€“1)
+ long 	|System.Int64 	|64-bit signed integer 	|-9,223,372,036,854,775,808: 9,223,372,036,854,775,807 (-263:263â€“1)
+ byte 	|System.Byte 	   |8-bit unsigned integer 	|  0:255 (0:28â€“1)
+ ushort 	|System.UInt16 |16-bit unsigned integer |  0:65,535 (0:216â€“1)
+ uint 	   |System.UInt32 	|32-bit unsigned integer|	0:4,294,967,295 (0:232â€“1)
+ ulong 	|System.UInt64 |64-bit unsigned integer |   0:18,446,744,073,709,551,615 (0:264â€“1)
 
 
-### Declaració i inicialització de variables
+### DeclaraciÃ³ i inicialitzaciÃ³ de variables
 
-Sintaxi idèntica a C:
+Sintaxi idÃ¨ntica a C:
 ```
 [tipus de dades] [nom variable];
 ```
-o usant  inicialització directa:
+o usant  inicialitzaciÃ³ directa:
 ```
 [tipus de dades] [nom variable] = [valor inicial];
 ```
@@ -116,7 +116,7 @@ o usant  inicialització directa:
 	long lng = 1000L;
 	ulong ulng = 10000UL;
 	float f     = 10.4f; // f indica float
-	double f = 10.4; // per defecte els nombres amb decimals són float.
+	double f = 10.4; // per defecte els nombres amb decimals sÃ³n float.
 	decimal d = 10.4M; // M de Money
 	char c = 'A';
 	
@@ -124,39 +124,39 @@ o usant  inicialització directa:
 ```
 ### Coma flotant o coma fixa 
 
-Si useu _double_o _float_, useu representació en coma flotant. Aquesta representació permet treballar amb magnituds arbitràriament grans o petites, però duu associada una precisió, que pot fer que el valor que s'emmagatzemi no sigui exactament el valor que voliem desar.
+Si useu _double_o _float_, useu representaciÃ³ en coma flotant. Aquesta representaciÃ³ permet treballar amb magnituds arbitrÃ riament grans o petites, perÃ² duu associada una precisiÃ³, que pot fer que el valor que s'emmagatzemi no sigui exactament el valor que voliem desar.
 
-Si usem _decimal_, treballem amb coma fixa. El llenguatge ens garanteix preservar fins a 29 digits sense pèrdua d'informació.
-Aquest tipus de dades és el que farem servir per representar valors monetaris.
+Si usem _decimal_, treballem amb coma fixa. El llenguatge ens garanteix preservar fins a 29 digits sense pÃ¨rdua d'informaciÃ³.
+Aquest tipus de dades Ã©s el que farem servir per representar valors monetaris.
 
-### Inferència de tipus: usant _var_
+### InferÃ¨ncia de tipus: usant _var_
 Podem "escaquejar-nos" de dir el tipus de dades, i deixar que sigui el compilador qui ho determini.
-Això ho indiquem usant el tipus de dades  _var_, que en realitat el que fa és obligar el compilador a decidir automàticament el tipus de dades.
+AixÃ² ho indiquem usant el tipus de dades  _var_, que en realitat el que fa Ã©s obligar el compilador a decidir automÃ ticament el tipus de dades.
 
 ```c#
-    var x = 25; // això és equivalent a : int x = 25;
-	var nom = "Paco";  // això equival a string nom ="Paco";
+    var x = 25; // aixÃ² Ã©s equivalent a : int x = 25;
+	var nom = "Paco";  // aixÃ² equival a string nom ="Paco";
 ```
 ### Constants
-Podem definir valors constants, que no es poden manipular posteriorment a la seva declaració. Cal inicialitzar la constant en la declaració.
+Podem definir valors constants, que no es poden manipular posteriorment a la seva declaraciÃ³. Cal inicialitzar la constant en la declaraciÃ³.
 ```c#
 	const int a = 100;
 ```
-## Scope o àmbit de les variables
+## Scope o Ã mbit de les variables
 ###  Variables locals i atributs. Valors per defecte
 El compilador ens avisa si hi ha variables locals que s'utilitzen sense incialitzar.
-Hi ha un tipus de variables "especials" anomenades atributs, molt diferent de les variables locals.  Recordeu que les variables locals "desapareixen" quan acaba la funció que s'executa. Per contra, els atributs mantenen el seu valor mentre l'objecte on estan existeix.
-La diferència entre un atribut i una variable local és el lloc on es declara:
+Hi ha un tipus de variables "especials" anomenades atributs, molt diferent de les variables locals.  Recordeu que les variables locals "desapareixen" quan acaba la funciÃ³ que s'executa. Per contra, els atributs mantenen el seu valor mentre l'objecte on estan existeix.
+La diferÃ¨ncia entre un atribut i una variable local Ã©s el lloc on es declara:
 ```c#
     public sealed partial class MainPage : Page
     {
-        int edat; // això és un atribut
+        int edat; // aixÃ² Ã©s un atribut
 
 ...
 
         private void btnBoto_Click(object sender, RoutedEventArgs e)
         {
-            decimal preu; // això és una variable local
+            decimal preu; // aixÃ² Ã©s una variable local
 			...
 
 ```
@@ -164,15 +164,15 @@ Els atributs si que es poden fer servir sense donar un valor inicial, doncs C# e
 
      tipus             | valor per defecte 
  --------------------|----------------------
- tipus numèrics  |            0             
+ tipus numÃ¨rics  |            0             
  tipus _bool_ |            false             
- tipus _char_ |            caràcter 0         
+ tipus _char_ |            carÃ cter 0         
  tipus _string_  |            null             
  tipus _object_  |            null             
  
-### Col·lisió de noms entre atributs i variables locals
+### ColÂ·lisiÃ³ de noms entre atributs i variables locals
 
- Es pot donar el cas de declarar una variable local i un atribut amb el mateix nom. Això COMPILA i és dona per vàlid:
+ Es pot donar el cas de declarar una variable local i un atribut amb el mateix nom. AixÃ² COMPILA i Ã©s dona per vÃ lid:
  
  ```c#
      class Persona
@@ -183,15 +183,15 @@ Els atributs si que es poden fer servir sense donar un valor inicial, doncs C# e
         {
             string nom = "Maria";
 
-            string copia = nom; // Què val "nom" aquí?
+            string copia = nom; // QuÃ¨ val "nom" aquÃ­?
 
         }
     }
 ```
-En la línia on hi ha el comentar, fem servir la variable _nom_, però hi ha certa ambigüitat doncs no sabem si ens estem referint a l'atribut o a la variable loca.l
+En la lÃ­nia on hi ha el comentar, fem servir la variable _nom_, perÃ² hi ha certa ambigÃ¼itat doncs no sabem si ens estem referint a l'atribut o a la variable loca.l
 
-La regla és senzilla, si no es diu el contrari , sempre  ens referim a la *variable local *
-Si volem forçar la referència a l'atribut cal usar el prefixe _this._
+La regla Ã©s senzilla, si no es diu el contrari , sempre  ens referim a la *variable local *
+Si volem forÃ§ar la referÃ¨ncia a l'atribut cal usar el prefixe _this._
 ```c#
     class Persona
     {
@@ -207,18 +207,18 @@ Si volem forçar la referència a l'atribut cal usar el prefixe _this._
     }
 ```
 
-###  Limitació de l'àmbit usant { } adiccionals
-Les variables sempre tenen un àmbit de vida limitat per les claus més internes on estan declarades. Això ens porta a que , de vegades, volem restringir  l'àmbit d'una variable a un fragment de codi, i això ho aconseguim forçant l'us de brackets addicionals:
+###  LimitaciÃ³ de l'Ã mbit usant { } adiccionals
+Les variables sempre tenen un Ã mbit de vida limitat per les claus mÃ©s internes on estan declarades. AixÃ² ens porta a que , de vegades, volem restringir  l'Ã mbit d'una variable a un fragment de codi, i aixÃ² ho aconseguim forÃ§ant l'us de brackets addicionals:
 ```c#
 
-            { // inici de l'àmbit
+            { // inici de l'Ã mbit
                 int v = 3; // la variable v "viu" dins dels brackets
                 v++;
 
-                //int v = 45;  // Això no compilaria, la variable existeix.
+                //int v = 45;  // AixÃ² no compilaria, la variable existeix.
             } // final de l'ambit ( v desapareix )
             {
-                int v = 4; // aquí la puc tornar a declarar, doncs v  no existeix
+                int v = 4; // aquÃ­ la puc tornar a declarar, doncs v  no existeix
                 v--;
             }
 ```
@@ -227,57 +227,57 @@ Les variables sempre tenen un àmbit de vida limitat per les claus més internes o
 
 
 ## Treballant amb cadenes
-Les cadenes són UNICODE ( per tant cada caràcter ocupa 16bits, i permeten representació universal de caràcters de la majoria de llenguatges exisitents ) 
+Les cadenes sÃ³n UNICODE ( per tant cada carÃ cter ocupa 16bits, i permeten representaciÃ³ universal de carÃ cters de la majoria de llenguatges exisitents ) 
 
- * Concatenació
+ * ConcatenaciÃ³
 Concatenem cadenes amb l'operador +
 ```c#
 	string nom = "Josep " + "Maria";
-	string nom_complet = nom + " López";
+	string nom_complet = nom + " LÃ³pez";
  ```
 
- * Salt de línia
- Podem usar els literals "\n" o "\r\n"per representar el salt de línia:
+ * Salt de lÃ­nia
+ Podem usar els literals "\n" o "\r\n"per representar el salt de lÃ­nia:
  
  ```c#
-	string dosLinies = "Primera Línia\nSegona Línia";
+	string dosLinies = "Primera LÃ­nia\nSegona LÃ­nia";
  ```
  
- És millor utilitizar la seva representació genèrica _Environment.NewLine_:
+ Ã‰s millor utilitizar la seva representaciÃ³ genÃ¨rica _Environment.NewLine_:
  
   ```c#
-	string dosLinies = "Primera Línia"+ Environment.NewLine + "Segona Línia";
+	string dosLinies = "Primera LÃ­nia"+ Environment.NewLine + "Segona LÃ­nia";
  ```
- * Autoreemplaçament
+ * AutoreemplaÃ§ament
  Si prefixem la cadena amb un $, podem incrustar valors de variables dins de la cadena sense haver de fer concatenacions.
  
    ```c#
-             string cadena = "Món";
-            string autoreemplaç = $"Hola {cadena} ! ";
+             string cadena = "MÃ³n";
+            string autoreemplaÃ§ = $"Hola {cadena} ! ";
   ```
   
- * Mètodes de conversió
+ * MÃ¨todes de conversiÃ³
  Qualsevol tipus primitiu es pot convertir a cadena usant .toString()
  
  
  
- * Mètodes de cerca, substitució i trimming
+ * MÃ¨todes de cerca, substituciÃ³ i trimming
  
-     MÈTODE             | FUNCIÓ
+     MÃˆTODE             | FUNCIÃ“
  --------------------|----------------------
- .Substring( posició_inicial )  |    retorna la subcadena que comença a posició_inicial(inclosa) fins al final            
-.Substring( posició_inicial, num_chars ) |       retorna la subcadena que comença a posició_inicial(inclosa), prenent num_chars consecutius a partir de la posició inicial (la posició inicial compta)              
+ .Substring( posiciÃ³_inicial )  |    retorna la subcadena que comenÃ§a a posiciÃ³_inicial(inclosa) fins al final            
+.Substring( posiciÃ³_inicial, num_chars ) |       retorna la subcadena que comenÃ§a a posiciÃ³_inicial(inclosa), prenent num_chars consecutius a partir de la posiciÃ³ inicial (la posiciÃ³ inicial compta)              
 .Trim()     | Elimina espais en blanc a l'inici i final de la cadena
-.Trim(char[] caracters) | Elimina els caràcters indicats al paràemtre del inici i final de la cadena
+.Trim(char[] caracters) | Elimina els carÃ cters indicats al parÃ emtre del inici i final de la cadena
  .PadLeft(num_cars)  | omple la cadena per l'esquerra amb espais en blanc, fins assolir longitud num_cars
  .PadLeft(num_cars),  caracter_de_padding)| omple la cadena per l'esquerra amb caracter_de_padding, fins assolir longitud num_cars
  .Length  | longitud de la cadena
- cadena[i]   | accés directe al ièssim caràcter de la cadena
+ cadena[i]   | accÃ©s directe al iÃ¨ssim carÃ cter de la cadena
  
  
-### Conversions de tipus numèric a cadena
-Al convertir a cadena un número, podem especificar el nombre de posicions senceres i decimals, així 
-com la utilització  o no d'un separador de milers.
+### Conversions de tipus numÃ¨ric a cadena
+Al convertir a cadena un nÃºmero, podem especificar el nombre de posicions senceres i decimals, aixÃ­ 
+com la utilitzaciÃ³  o no d'un separador de milers.
 ```c#
 	double numeroDec = 2321.23;
 	string num = numeroDec.ToString("#####.000"); //2321,230
@@ -289,7 +289,7 @@ com la utilització  o no d'un separador de milers.
 	num = numeroDec.ToString("##,###.000", us); //2,321.230
  ```
 ### Conversions de tipus data a cadena
-#### Declaració de data
+#### DeclaraciÃ³ de data
 Les dates es representen amb el tipus DateTime, que permet emmagatzemar la data i la hora ( hores, minuts i segons )
 de forma conjunta.
 Per declarar i inicialitzar una data ho podem fer de diverses maneres:
@@ -297,16 +297,16 @@ Per declarar i inicialitzar una data ho podem fer de diverses maneres:
             
             DateTime ara = DateTime.Now; // ARA, incloent dia i hora
 
-            DateTime avui = DateTime.Today; // ARA, incloent dia només
+            DateTime avui = DateTime.Today; // ARA, incloent dia nomÃ©s
 
-            DateTime data = new DateTime(2017, 12, 31); // constructor explícit amb data
+            DateTime data = new DateTime(2017, 12, 31); // constructor explÃ­cit amb data
 
-            DateTime dataIHora = new DateTime(2017, 12, 31, 22, 30, 59); // constructor explícit amb data i hora
+            DateTime dataIHora = new DateTime(2017, 12, 31, 22, 30, 59); // constructor explÃ­cit amb data i hora
 
 
 ```
-#### Conversió a cadena especificant el format
-Podem usar cadenes de format per especificar quina és la representació que volem assolir.
+#### ConversiÃ³ a cadena especificant el format
+Podem usar cadenes de format per especificar quina Ã©s la representaciÃ³ que volem assolir.
 ```c#
 
             string dataS = data.ToString("dd/MM/yyyy"); //  31/12/2017
@@ -318,14 +318,14 @@ Podem usar cadenes de format per especificar quina és la representació que volem
             dataS = data.ToString("hh:mm:ss"); //12:00:00
 
             CultureInfo fr = new CultureInfo("fr-FR");
-            dataS = data.ToString("dddd, dd \\de MMMM \\de yyyy", fr); //dimanche, 31 de décembre de 2017
+            dataS = data.ToString("dddd, dd \\de MMMM \\de yyyy", fr); //dimanche, 31 de dÃ©cembre de 2017
 ```
-### Conversions de cadena a tipus numèrics (Parsing)
+### Conversions de cadena a tipus numÃ¨rics (Parsing)
 
 Podem treballar de forma "Segura" amb _[TIPUS_DE_DADES].TryParse()_ . 
-Podem usar  Aquest mètode intenta convertir la cadena a un número TIPUS_DE_DADES, on TIPUS_DE_DADES pot ser Int32, Double, etc.
-Si la conversió falla, el mètode retorna false, true altrament.
-Fixeu-vos que el resultat es retorna per un paràmetre de sortida ( marcat com a _out_ )
+Podem usar  Aquest mÃ¨tode intenta convertir la cadena a un nÃºmero TIPUS_DE_DADES, on TIPUS_DE_DADES pot ser Int32, Double, etc.
+Si la conversiÃ³ falla, el mÃ¨tode retorna false, true altrament.
+Fixeu-vos que el resultat es retorna per un parÃ metre de sortida ( marcat com a _out_ )
 ```c#
 
 
@@ -337,33 +337,33 @@ Fixeu-vos que el resultat es retorna per un paràmetre de sortida ( marcat com a 
             exit = Double.TryParse("123.22", out  doubleParsed); //doubleParsed = 12322, exit = true
             
 
-            // Podem especificar l'idioma i l'estil del número
+            // Podem especificar l'idioma i l'estil del nÃºmero
             NumberStyles style = NumberStyles.Number | NumberStyles.AllowDecimalPoint;
             CultureInfo uk = new CultureInfo("en-UK");
             exit = Double.TryParse("123.22", style, uk, out doubleParsed); //doubleParsed = 123,22, exit = true
 
-            // Si dona error la conversió retorna false
+            // Si dona error la conversiÃ³ retorna false
             exit = Double.TryParse("123,xx", out doubleParsed); //doubleParsed = 0, exit = false
 ```
-També podem anar "a l'aventura" usant _[TIPUS_DE_DADES].Parse()_, que funciona retornant directament el nombre
-convertit, però amb el problema de que si la conversió no és correcta, llança una excepció.
+TambÃ© podem anar "a l'aventura" usant _[TIPUS_DE_DADES].Parse()_, que funciona retornant directament el nombre
+convertit, perÃ² amb el problema de que si la conversiÃ³ no Ã©s correcta, llanÃ§a una excepciÃ³.
 
 ```c#
-            double dd = double.Parse("123,2"); // tot va bé dd= 123,2
+            double dd = double.Parse("123,2"); // tot va bÃ© dd= 123,2
             try
             {
                 dd = double.Parse("xxxxx");
             }
             catch (Exception ex)
             {
-                // Passem per aquí !!!
+                // Passem per aquÃ­ !!!
                 dd = 0;
             }
 ```
 
 ### Conversions de cadena a tipus data (Parsing)
-Si coneixem el format de la data dins de la cadena que se'ns proporciona, és senzill usar DateTime.ParseExact
-per fer la conversió a DateTime:
+Si coneixem el format de la data dins de la cadena que se'ns proporciona, Ã©s senzill usar DateTime.ParseExact
+per fer la conversiÃ³ a DateTime:
 ```c#
 
             string dataAParsejar = "31-12-2020 14h 12' 55''";
