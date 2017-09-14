@@ -1,4 +1,4 @@
-[ ... back  ]( ../README.md)
+[ ... back  ](../README.md)
 
 # Llistes dinàmiques  (_List_) 
 
