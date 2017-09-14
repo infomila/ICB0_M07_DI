@@ -29,17 +29,20 @@
 		a=0;
 	}
  ```
- ### if condensat
- És una estructura  if molt compacta:
- ```
- [ condició lògica ] ? [acció si la condició és certa ] : [ acció si és falsa ] ;
- ```
- Un exemple:
+	
+### if condensat
  
- ```c#
+ És una estructura  if molt compacta:
+```
+ [ condició lògica ] ? [acció si la condició és certa ] : [ acció si és falsa ] ;
+```
+ Un exemple:
+
+```c#
 	 a==3? a++: a--;
- ```
- ### switch
+```
+ 
+### switch
  És igual que a C, però amb algunes peculiaritats:
   *  ens força a posar _break_ ( evita errors )
   *  podem fer _goto_
@@ -119,10 +122,10 @@ switch(pais)
 ------------------------------------------------------------------------------------------------------------
 
 
- ## Taules
+## Taules
  
  C# ens permet definir taules estàtiques:
-  ```c#
+```c#
              // exemple de taula amb inicialització
             int[] numeros= { 1, 6, 7, 10 };
 
@@ -132,14 +135,15 @@ switch(pais)
             // creació d'una taula indicant dimensions, que s'omplirà
             // amb el valor per defecte del tipus de dades ( 0 en aquest cas )
             double[] temperatures = new double[10];
-  ```
+```
   
 ## Iteradors
 ### for
 > for (initializer; condition; iterator):
 >        statement(s)
-  Funciona igual que a C.
-  Iterador clàssic
+
+Funciona igual que a C.
+Iterador clàssic:
 ```c#
 int suma = 0;
 int i ;
@@ -148,7 +152,7 @@ for ( i = 0; i < 100; i++)
   suma += i;
 }
 ```
-Iterador amb declaració incorporada
+Iterador amb declaració incorporada:
 ```c#
 int suma = 0;
 for (int i = 0; i < 100; i++)

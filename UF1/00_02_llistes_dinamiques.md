@@ -1,5 +1,6 @@
 [ ... back  ](../README.md)
 
+
 # Llistes dinàmiques  (_List_) 
 
 Les llistes dinàmiques, a diferència de les taules, són estructures de dades que poden anar creixent a demanda. No cal que donem una mida inicial de la llista, sinó que la llista anirà allotjant memòria a mesura que necessiti afegir nous elements a la llista.
