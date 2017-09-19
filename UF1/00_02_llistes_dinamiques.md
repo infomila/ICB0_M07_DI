@@ -73,12 +73,12 @@ La sintaxi d'una llista dinàmica bàsica és:
      bool kkFound = people.Contains("kk"); //kkFound false
 ```
 
- # Diccionaris
+# Diccionaris
  Un diccionari és una taula que associa una clau amb un valor. A diferència de les taules convencionals, on la clau sempre és un valor enter de 0 a N-1, als diccionaris trobem que:
  * les claus no tenen per què ser correlatives
  * les claus poden ser de qualsevol tipus de dades: números, cadenes, dates .....
  
- ## Inicialització i entrada de dades dels diccionaris:
+## Inicialització i entrada de dades dels diccionaris:
  ```c#
      //    tipus de la clau, tipus del valor
      Dictionary<string, int> anotacions = new Dictionary<string,int>();
@@ -111,15 +111,15 @@ Podem accedir als valors proporcionant la clau. Tingueu present que si la clau n
 ```
 
 Si volem assegurar el tret, podem preguntar al diccionari si la clau existeix abans d'intentar llegir-ne el valor, usant _.ContainsKey_:
- ```c#
+```c#
      if(anotacions.ContainsKey("????"))
      {
      	// fer aquí la feina amb la seguretat que la clau existeix
      }
- ```
+```
  També podem fer recorreguts, 
  
- ```c#
+```c#
      // Primer aconseguim la col·lecció de totes les claus
      var claus = anotacions.Keys;
      // Recorrem les claus, i per cada clau demanem el valor
@@ -127,13 +127,13 @@ Si volem assegurar el tret, podem preguntar al diccionari si la clau existeix ab
      {
      	Debug.WriteLine($"{clau} ha fet {anotacions[clau]} punts");
      } 
- ```
+```
  
- ```c#
+```c#
 	// Podem fer també un recorregut estrictament pels valors
 	var valors = anotacions.Values;
 	foreach(int anotacio in valors)
 	{
 		Debug.WriteLine($"{anotacio}");
 	} 
- ```
+```
