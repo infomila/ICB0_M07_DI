@@ -162,13 +162,13 @@ La diferència entre un atribut i una variable local és el lloc on es declara:
 ```
 Els atributs si que es poden fer servir sense donar un valor inicial, doncs C# els inicialitza amb un valor per defecte segons el seu tipus de dades:
 
-     tipus             | valor per defecte 
- --------------------|----------------------
- tipus numèrics  |            0             
- tipus _bool_ |            false             
- tipus _char_ |            caràcter 0         
- tipus _string_  |            null             
- tipus _object_  |            null             
+tipus             | valor per defecte 
+--------------------|----------------------
+tipus numèrics  |            0             
+tipus _bool_ |            false             
+tipus _char_ |            caràcter 0         
+tipus _string_  |            null             
+tipus _object_  |            null             
  
 ### Col·lisió de noms entre atributs i variables locals
 
