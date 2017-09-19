@@ -74,11 +74,13 @@ La sintaxi d'una llista dinàmica bàsica és:
 ```
 
 # Diccionaris
+
  Un diccionari és una taula que associa una clau amb un valor. A diferència de les taules convencionals, on la clau sempre és un valor enter de 0 a N-1, als diccionaris trobem que:
  * les claus no tenen per què ser correlatives
  * les claus poden ser de qualsevol tipus de dades: números, cadenes, dates .....
  
 ## Inicialització i entrada de dades dels diccionaris:
+
  ```c#
      //    tipus de la clau, tipus del valor
      Dictionary<string, int> anotacions = new Dictionary<string,int>();
