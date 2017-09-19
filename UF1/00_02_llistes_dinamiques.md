@@ -66,7 +66,8 @@ La sintaxi d'una llista dinàmica bàsica és:
     // està a l'index 2 (inclós)
 ```
 
- ## Cerca d'elements
+## Cerca d'elements
+
  ```c#
      bool MariaFound = people.Contains("Maria"); // mariaFound és true
      bool mariaFound = people.Contains("maria"); // mariaFound és false
@@ -96,7 +97,7 @@ Maria|10
 Pere|8
 
 Podem accedir als valors proporcionant la clau. Tingueu present que si la clau no es troba, ens llança una excepció ___KeyNotFoundException___
-  ```c#
+ ```c#
     // Buscar valor existent
     int anotacioMaria = anotacions["Maria"]; //anotacioMaria = 10
     Debug.WriteLine(anotacioMaria);
