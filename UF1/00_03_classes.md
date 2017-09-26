@@ -14,10 +14,11 @@ Els constructors tenen el mateix nom que la classe, i permeten donar valors inic
         public DateTime mDataNaixement;		//Això és un atribut de la classe
         public string mNom;					//Això és un atribut de la classe
 		
-
-        public Persona()					// Constructor sense paràmetres
+		// Constructor sense paràmetres
+        public Persona()					
         {
         }
+		
 		// Constructor amb paràmetres
         public Persona(string pNom, int pNumeroNIF, char pLletraNIF, DateTime pDataNaix)
         {
