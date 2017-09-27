@@ -11,13 +11,15 @@
 
 ### UF 1: Disseny i implementació d’interfícies
 
+#### C# intro
 *  [Instal·lació Visual Studio](./UF1/00_00_setup.md)
 *  [Introducció: variables, string , date i conversions](./UF1/00_00_variables_strings_conversions.md)
 *  [Estructures de control](./UF1/00_01_estructures_de_control.md)
 *  [Llistes Dinàmiques](./UF1/00_02_llistes_dinamiques.md)
 *  [Classes](./UF1/00_03_classes.md)
-*  [PAC1](.UF1/pac1/00_04_PAC1.md)
-
+*  [PAC1](./UF1/pac1/00_04_PAC1.md)
+#### Fonaments d'interfícies amb UWP-xaml
+*  [Fonaments](./UF1/01_00_fonaments_interficies.md)
 ### UF 2: Preparació i distribució d’aplicacions
 
 
