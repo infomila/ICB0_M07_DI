@@ -22,7 +22,9 @@
 
 ### Estils bàsics
 
-Definició d'un estil:
+#### Definició d'un estil genèric per a botons
+
+Fixeu-vos que es posa a Page.resources:
 ```XML
 <Page.Resources>
     <Style TargetType="Button">
@@ -41,3 +43,52 @@ Definició d'un estil:
     </Style>
 </Page.Resources>
 ```
+
+#### Definició d'un estil amb clau (x:Key):
+
+```XML
+    <Style x:Key="PurpleStyle" TargetType="Button">
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="Purple"/>
+    </Style>
+```
+
+#### Aplicació de l'estil:
+
+```XML
+<Button Content="Button" Style="{StaticResource PurpleStyle}"/>
+```
+
+#### Herència d'estils:
+
+Podem heredar l'atribut "BasedOn" per crear l'estil a partir d'una base.
+```XML
+    <Style x:Key="BasicStyle" TargetType="ContentControl">
+        <Setter Property="Width" Value="130" />
+        <Setter Property="Height" Value="30" />
+    </Style>
+
+    <Style x:Key="ButtonStyle" TargetType="Button"
+           BasedOn="{StaticResource BasicStyle}">
+        <Setter Property="BorderBrush" Value="Orange" />
+        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="Foreground" Value="Red" />
+    </Style>
+```
+
+### TextBlocks i TextBox
+
+### ListBox
+
+### CheckBox
+
+### RadioButton 
+
+Agrupem 
+```XML
+	<StackPanel>
+			<RadioButton Content="Blue" GroupName="BorderBrush" Tag="Blue" Checked="BorderRadioButton_Checked"/>
+			<RadioButton Content="White" GroupName="BorderBrush" Tag="White"  Checked="BorderRadioButton_Checked"/>
+	</StackPanel>
+```			
