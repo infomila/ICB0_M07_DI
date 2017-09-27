@@ -23,7 +23,7 @@
 ### Estils bàsics
 
 Definició d'un estil:
-```xaml
+```xml
 <Page.Resources>
     <Style TargetType="Button">
         <Setter Property="BorderThickness" Value="5" />
