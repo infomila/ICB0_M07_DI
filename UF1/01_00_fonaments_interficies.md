@@ -59,7 +59,7 @@ private void Button_Click(object sender, RoutedEventArgs e)
 
 #### Definició d'un estil genèric per a botons
 
-Fixeu-vos que es posa a Page.resources:
+Fixeu-vos que es posa a _Page.resources_:
 ```xml
 <Page.Resources>
     <Style TargetType="Button">
@@ -112,11 +112,29 @@ Podem heredar l'atribut "BasedOn" per crear l'estil a partir d'una base.
     </Style>
 ```
 
-### TextBlocks i TextBox
+###  TextBox
+Events principals del TextBox:
 
-Event _TextChanged_
-Event _KeyDown_ i _KeyUp_
+#### Event _TextChanged_
 
+```c#
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+            TextBox tb = (TextBox)sender;
+            string textDelTextBox= tb.Text;
+        }
+```		
+#### Event _KeyDown_ i _KeyUp_
+
+```c#
+        private void txtNumeric_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if( !( e.Key.ToString().StartsWith("Number") )){
+                e.Handled = true;
+            }
+        }
+```
 ### Diàlegs simples
 
 ```c#
@@ -137,6 +155,26 @@ Event _KeyDown_ i _KeyUp_
 ```
 
 ### ListBox
+
+```xml
+        <ListBox x:Name="lsbPreguntes" 
+			SelectionChanged="lsbPreguntes_SelectionChanged">
+            <ListBoxItem>1</ListBoxItem>
+            <ListBoxItem>2</ListBoxItem>
+            <ListBoxItem>3</ListBoxItem>
+        </ListBox>
+```
+L'event princiapl és _SelectionChanged_, que es disapara cada vegada que l'usuari
+ tria un ítem diferent sobre la llista:
+````c#
+        private void lsbPreguntes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int indexItemSeleccionat = lsbPreguntes.SelectedIndex;
+            string textSeleccionat = lsbPreguntes.SelectedItem.ToString();
+        }
+````
+
+*PENDING*: Exemple de ListBox multiselecció
 
 ### CheckBox
 
