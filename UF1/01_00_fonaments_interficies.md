@@ -8,7 +8,7 @@
 ### StackPanel
 Té un únic requisit: definir l'atribut *Orientation*, amb valors _Vertical_ o _Horizontal_.
 Decidiu si el voleu horitzontal o vertical i els elements a dins s'apilen segons aquesta orientació.
-```XML 
+```xml 
         <StackPanel Orientation="Vertical">
             <TextBox x:Name="txbLogin" PlaceholderText="Login"></TextBox>
             <TextBox x:Name="txbPassword" PlaceholderText="password"></TextBox>
@@ -24,7 +24,7 @@ Les mesures poden ser:
 * "percentuals", posant un asterisc precedit d'un pes en tant per 100 o qualsevol altre base ( 5*) 
 * ajustat als continguts (auto)
 
-```XML
+```xml
     <Grid > 
         <Grid.ColumnDefinitions >
 			<ColumnDefinition Width="auto"></ColumnDefinition>
@@ -61,7 +61,7 @@ private void Button_Click(object sender, RoutedEventArgs e)
 #### Definició d'un estil genèric per a botons
 
 Fixeu-vos que es posa a Page.resources:
-```XML
+```xml
 <Page.Resources>
     <Style TargetType="Button">
         <Setter Property="BorderThickness" Value="5" />
@@ -82,7 +82,7 @@ Fixeu-vos que es posa a Page.resources:
 
 #### Definició d'un estil amb clau (x:Key):
 
-```XML
+```xml
     <Style x:Key="PurpleStyle" TargetType="Button">
         <Setter Property="FontFamily" Value="Segoe UI"/>
         <Setter Property="FontSize" Value="14"/>
@@ -92,14 +92,14 @@ Fixeu-vos que es posa a Page.resources:
 
 #### Aplicació de l'estil:
 
-```XML
+```xml
 <Button Content="Button" Style="{StaticResource PurpleStyle}"/>
 ```
 
 #### Herència d'estils:
 
 Podem heredar l'atribut "BasedOn" per crear l'estil a partir d'una base.
-```XML
+```xml
     <Style x:Key="BasicStyle" TargetType="ContentControl">
         <Setter Property="Width" Value="130" />
         <Setter Property="Height" Value="30" />
@@ -144,7 +144,7 @@ Event KeyDown i KeyUp
 ### RadioButton 
 
 Agrupem 
-```XML
+```xml
 	<StackPanel>
 			<RadioButton Content="Blue" GroupName="BorderBrush" Tag="Blue" Checked="BorderRadioButton_Checked"/>
 			<RadioButton Content="White" GroupName="BorderBrush" Tag="White"  Checked="BorderRadioButton_Checked"/>
