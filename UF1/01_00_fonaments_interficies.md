@@ -25,13 +25,13 @@ Les mesures poden ser:
 * ajustat als continguts (auto)
 
 ```xml
-    <Grid > 
-        <Grid.ColumnDefinitions >
-			<ColumnDefinition Width="auto"></ColumnDefinition>
-            <ColumnDefinition Width="70*"></ColumnDefinition>
-            <ColumnDefinition Width="30*"></ColumnDefinition>
-			<ColumnDefinition Width="40"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
+<Grid > 
+	<Grid.ColumnDefinitions >
+		<ColumnDefinition Width="auto"></ColumnDefinition>
+		<ColumnDefinition Width="70*"></ColumnDefinition>
+		<ColumnDefinition Width="30*"></ColumnDefinition>
+		<ColumnDefinition Width="40"></ColumnDefinition>
+	</Grid.ColumnDefinitions>
 ```
 
 Per assignar un element a una casella de la graella, cal afegir un atribut _Grid.Column=""_ i/o _Grid.Row=""_
@@ -43,10 +43,9 @@ Per assignar un element a una casella de la graella, cal afegir un atribut _Grid
 
 ```c#     
 {
-Button b = new Button();
+	Button b = new Button();
 
-b.Click += Button_Click; // assignem dimàmicament el mètode de gestió de l'event Click
-
+	b.Click += Button_Click; // assignem dimàmicament el mètode de gestió de l'event Click
 }
 private void Button_Click(object sender, RoutedEventArgs e)
 {
@@ -115,8 +114,8 @@ Podem heredar l'atribut "BasedOn" per crear l'estil a partir d'una base.
 
 ### TextBlocks i TextBox
 
-Event TextChanged
-Event KeyDown i KeyUp
+Event _TextChanged_
+Event _KeyDown_ i _KeyUp_
 
 ### Diàlegs simples
 
