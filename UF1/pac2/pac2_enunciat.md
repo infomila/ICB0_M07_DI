@@ -44,6 +44,7 @@ Trobareu més a sota a l'annex el codi per a fer aquesta feina.
 Quan premem la icona de l'ull a l'edició del perfil, es mostra en un 
 _PopUp_ (vegeu [aquí](https://code.msdn.microsoft.com/windowsapps/Popup-Control-in-universel-700d46d4) per més detalls ) un gràfic de l'etapa:
 ![Menú plegat](screenshots/ProfileEditor_View.png "Captura de pantalla")
+
 Aquest gràfic és integrament un control personalitzat que cal implementar.
 
 
