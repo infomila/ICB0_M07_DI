@@ -23,35 +23,7 @@ cal usar la comanda _Debug_WriteLine("MISSATGE")_
 ##  Sortida / Entrada per consola
 
 
->NOTA: _System.Console_ és la classe que cal utilitzar per escriure a consola.
->
->   * Si useu WPF + .NET Framework  es pot fer servir immediatament.
-> * Si useu Universal Apps + .NET Core, cal que carregueu el mòdul de consola. Això ho podeu fer editant l'arxiu _project.json_ i afegint la part que es mostra més a sota entre comentaris:
-```
-{
-  "dependencies": {
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0"
-  },
-  "frameworks": {
-    "uap10.0": { },
-    //--------------------------------------------------------------
-    "dnxcore50": {
-      "dependencies": {
-        "System.Console": "4.0.0-beta-*"
-      }
-    }
-    //--------------------------------------------------------------
-  },
-  "runtimes": {
-    "win10-arm": {},
-    "win10-arm-aot": {},
-    "win10-x86": {},
-    "win10-x86-aot": {},
-    "win10-x64": {},
-    "win10-x64-aot": {}
-  }
-}
-```
+>NOTA: _System.Console_ és la classe que cal utilitzar per escriure a consola.a  WPF + .NET Framework  es pot fer servir immediatament.
 
 Els següent exemple mostra l'utilització de la consola:
 
@@ -72,6 +44,17 @@ podeu simplificar-ho, podent usar directament el nom de la classe "Console", en 
 	// Llegint l'entrada de l'usuari
 	string userInput = Console.ReadLine();
 ```
+
+
+
+> * Si useu Universal Apps + .NET Core, la classe base és _Debug_, del paquet _System.Diagnostics_
+```c#
+    using System.Diagnostics;
+    ...
+    Debug.WriteLine("Hola Món");
+
+```
+
 
 
 
