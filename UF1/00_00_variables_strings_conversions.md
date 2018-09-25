@@ -228,16 +228,16 @@ Concatenem cadenes amb l'operador +
  
  És millor utilitizar la seva representació genèrica _Environment.NewLine_:
  
-  ```c#
+```c#
 	string dosLinies = "Primera Línia"+ Environment.NewLine + "Segona Línia";
- ```
+```
  * Autoreemplaçament
  Si prefixem la cadena amb un $, podem incrustar valors de variables dins de la cadena sense haver de fer concatenacions.
  
-   ```c#
+```c#
              string cadena = "Món";
             string autoreemplaç = $"Hola {cadena} ! ";
-  ```
+```
   
  * Mètodes de conversió
  Qualsevol tipus primitiu es pot convertir a cadena usant .toString()
@@ -246,16 +246,16 @@ Concatenem cadenes amb l'operador +
  
  * Mètodes de cerca, substitució i trimming
  
-     MÈTODE             | FUNCIÓ
- --------------------|----------------------
- .Substring( posició_inicial )  |    retorna la subcadena que comença a posició_inicial(inclosa) fins al final            
+MÈTODE              | FUNCIÓ
+--------------------|----------------------
+.Substring( posició_inicial )  |    retorna la subcadena que comença a posició_inicial(inclosa) fins al final            
 .Substring( posició_inicial, num_chars ) |       retorna la subcadena que comença a posició_inicial(inclosa), prenent num_chars consecutius a partir de la posició inicial (la posició inicial compta)              
 .Trim()     | Elimina espais en blanc a l'inici i final de la cadena
 .Trim(char[] caracters) | Elimina els caràcters indicats al paràemtre del inici i final de la cadena
- .PadLeft(num_cars)  | omple la cadena per l'esquerra amb espais en blanc, fins assolir longitud num_cars
- .PadLeft(num_cars),  caracter_de_padding)| omple la cadena per l'esquerra amb caracter_de_padding, fins assolir longitud num_cars
- .Length  | longitud de la cadena
- cadena[i]   | accés directe al ièssim caràcter de la cadena
+.PadLeft(num_cars)  | omple la cadena per l'esquerra amb espais en blanc, fins assolir longitud num_cars
+.PadLeft(num_cars),  caracter_de_padding)| omple la cadena per l'esquerra amb caracter_de_padding, fins assolir longitud num_cars
+.Length  | longitud de la cadena
+cadena[i]   | accés directe al ièssim caràcter de la cadena
  
  
 ### Conversions de tipus numèric a cadena
@@ -270,7 +270,7 @@ com la utilització  o no d'un separador de milers.
 	// Utilitzant un indicador de cultura
 	CultureInfo us = new CultureInfo("en-US");
 	num = numeroDec.ToString("##,###.000", us); //2,321.230
- ```
+```
 ### Conversions de tipus data a cadena
 #### Declaració de data
 Les dates es representen amb el tipus DateTime, que permet emmagatzemar la data i la hora ( hores, minuts i segons )
