@@ -21,7 +21,15 @@
 *  [PAC2](./UF1/pac2/pac2_enunciat.md)
 #### Fonaments d'interfícies amb UWP-xaml
 *  [Fonaments](./UF1/01_00_fonaments_interficies.md)
+
+#### Bases de dades
+* [Introducció BBDD](./UF1/04_00_connectivitat_BD.md)
+
+
 ### UF 2: Preparació i distribució d’aplicacions
+
+
+
 
 ..
 
