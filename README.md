@@ -17,8 +17,8 @@
 *  [Estructures de control](./UF1/00_01_estructures_de_control.md)
 *  [Llistes Dinàmiques](./UF1/00_02_llistes_dinamiques.md)
 *  [Classes](./UF1/00_03_classes.md)
-*  [PAC1](./UF1/pac1/00_04_PAC1.md)
-*  [PAC2](./UF1/pac2/pac2_enunciat.md)
+*  [PAC1](./UF1/pac/pac_enunciat.md)
+
 #### Fonaments d'interfícies amb UWP-xaml
 *  [Fonaments](./UF1/01_00_fonaments_interficies.md)
 

@@ -48,18 +48,16 @@ podeu simplificar-ho, podent usar directament el nom de la classe "Console", en 
 
 
 > * Si useu Universal Apps + .NET Core, la classe base és _Debug_, del paquet _System.Diagnostics_
+
 ```c#
     using System.Diagnostics;
     ...
     Debug.WriteLine("Hola Món");
-
 ```
 
 
 
 
-
--------------------------------------------------------------------------------
 
 
 ## Tipus de dades i variables
