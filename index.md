@@ -6,8 +6,8 @@
 ### Adreces d'interès
 
 * Vegeu la pàgina millor des de [GitHub Pages](https://infomila.github.io/ICB0_M07_DI)
-* Disposeu també del  [Repositori d'exemples de classe a GitHub](https://github.com/infomila/ICB0_M07_DI_Samples_17_18)
-* El [Classroom del mòdul](https://classroom.google.com/u/1/c/NzM2NjY4NTg4Mlpa)
+* Disposeu també del  [Repositori d'exemples de classe a GitHub](https://github.com/bernatorellana/ICB0_M07_DI_20_21)
+* El [Classroom del mòdul](https://classroom.google.com/u/1/c/MTY3ODMwMjczOTc0)
 
 ### UF 1: Disseny i implementació d’interfícies
 
