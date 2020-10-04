@@ -224,11 +224,12 @@ Concatenem cadenes amb l'operador +
 	string dosLinies = "Primera Línia\nSegona Línia";
  ```
  
- És millor utilitizar la seva representació genèrica _Environment.NewLine_:
+ És millor utilitizar la seva representació genèrica _Environment.NewLine_ :
  
 ```c#
 	string dosLinies = "Primera Línia"+ Environment.NewLine + "Segona Línia";
 ```
+
  * Autoreemplaçament
  Si prefixem la cadena amb un $, podem incrustar valors de variables dins de la cadena sense haver de fer concatenacions.
  
@@ -259,6 +260,7 @@ cadena[i]   | accés directe al ièssim caràcter de la cadena
 ### Conversions de tipus numèric a cadena
 Al convertir a cadena un número, podem especificar el nombre de posicions senceres i decimals, així 
 com la utilització  o no d'un separador de milers.
+
 ```c#
 	double numeroDec = 2321.23;
 	string num = numeroDec.ToString("#####.000"); //2321,230
@@ -283,8 +285,6 @@ Per declarar i inicialitzar una data ho podem fer de diverses maneres:
             DateTime data = new DateTime(2017, 12, 31); // constructor explícit amb data
 
             DateTime dataIHora = new DateTime(2017, 12, 31, 22, 30, 59); // constructor explícit amb data i hora
-
-
 ```
 #### Conversió a cadena especificant el format
 Podem usar cadenes de format per especificar quina és la representació que volem assolir.
