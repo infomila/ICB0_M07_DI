@@ -46,8 +46,8 @@ Els ítems són seleccionables mitjançant la llista, o prement directament a so
 
 ## Recursos
 Arxius proporcionats:
- * [Assets: Mapes i icones d'exemple](./resources/resources.jar)
- * [Classes del model ](./resources/model.zip)
+ * [Assets: Mapes i icones d'exemple](https://github.com/infomila/ICB0_M07_DI/raw/master/UF1/pac2/resources/resources.rar)
+ * [Classes del model ](https://github.com/infomila/ICB0_M07_DI/raw/master/UF1/pac2/resources/Model.zip)
 
  
 ## Codi proporcionat 
