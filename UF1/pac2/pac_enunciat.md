@@ -46,8 +46,8 @@ Els ítems són seleccionables mitjançant la llista, o prement directament a so
 
 ## Recursos
 Arxius proporcionats:
- * [Assets: Mapes i icones d'exemple](resources/resources.jar)
- * [Classes del model ](resources/model.zip)
+ * [Assets: Mapes i icones d'exemple](./resources/resources.jar)
+ * [Classes del model ](./resources/model.zip)
 
  
 ## Codi proporcionat 
