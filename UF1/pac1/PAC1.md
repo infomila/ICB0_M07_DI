@@ -5,7 +5,7 @@
 ## Introducció
 Volem fer una petita aplicació que ens ajudi a organitzar una lliga d'escacs. La interficie gràfica serà senzilla, i ens enfocarem sobretot a treballar les estructures de dades i la validació.
 
-![](xef.png)
+![](xef.jpg)
 
 
 ## Gestió dels ingredients
