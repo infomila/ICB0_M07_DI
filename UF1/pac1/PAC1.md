@@ -5,7 +5,7 @@
 ## Introducció
 Volem fer una petita aplicació que ens ajudi a organitzar una lliga d'escacs. La interficie gràfica serà senzilla, i ens enfocarem sobretot a treballar les estructures de dades i la validació.
 
-![](2020-09-30-07-25-22.png)
+![](xef.png)
 
 
 ## Gestió dels ingredients
@@ -95,36 +95,5 @@ Quan es premi el *Button* "Informe de Compres", es mostrarà en el *TextBlock* l
 *IMPORTANT*: En aquesta llista no hi ha d'haver repeticions. És possible que varis plats comparteixin alguns ingredients, i per tant cal sumar-ne les quantitats i que l'ingredient només aparegui un cop.
 
 Podeu usar un *RichTextBlock* per donar color i estil al l'informe, més info [aquí](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock?redirectedfrom=MSDN&view=winrt-20348).
-        
-
-Volem que la lliga es representi mitjançant les següents estructures de dades:
-```c#
-    Dictionary< dies , List<EnfrontamentClub> >
-```
-On definim un *EnfrontamentClub* com:
-``` c#
-        Club clubDeCasa;
-        Club clubVisitant;
-        Llist<Partida>;
-```        
-
-i una *Partida* és:
-
-``` c#        
-        Jugador jugadorA_blanques; 
-        Jugador jugadorB_negres;
-```
-
-
-####  Requeriments d'Interfície:
-L'organització resultant es mostrarà a la interfície mitjançant tres *ListBox*:
-1. *ListBox* 1 : Mostra la llista de dies del torneig, en format:
-> dd/mm/yyyy
-2. *ListBox* 2 : quan triem un dia de torneig al *ListBox* anterior, mostra llista d'emparellaments per aquell dia, en format: 
->ClubA - ClubB
-3. *ListBox* 3 : quan seleccionem un emparellament a la llista anterior, es mostra aquí la llista de partides en format:
->  JugadorA(ELO)[B] vs JugadorB(ELO) 
-On la primera columna es correspon al *ClubA* i la segona al *ClubB*, i la marca [B] indica qui juga amb les blanques. 
- 
-
+         
 
