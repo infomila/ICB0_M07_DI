@@ -8,49 +8,94 @@ Volem fer una petita aplicació que ens ajudi a organitzar una lliga d'escacs. L
 ![](2020-09-30-07-25-22.png)
 
 
-## Gestió dels clubs
+## Gestió dels ingredients
 Els clubs són les entitats que s'enfronten a les lligues.
-Per representar-los usarem la classe *Club*, que conté només un atribut *nom*.
+Per representar-los usarem la classe *Ingredient*, que conté només un atribut *nom*, i un atribut *unitat* ( de tipus enumeració, amb els valors UDS, ML, G ).
+La classe *Plat* conté els següents atributs:
+```c#
+        String Nom; // (mínim 4 lletres)
+        Unitat unitat;
+```
+L'enumeració *Unitat* es defineix de la següent forma:
+
+```c#
+    enum Unitat
+    {
+        UDS,
+        G,
+        ML
+    }
+```
+
 Les operacions disponibles són:
- - alta d'un nou club
- - baixa d'un club existent
+ - alta de l'ingredient: 
+ - eliminar ingredient.
+ 
+
+#### Requeriments de la Interfície gràfica per gestionar ingredients
+
+   - *ListBox* on es mostra el nom dels ingredients.
+   - *TextBox* + *Button* "Alta Ing.". L'usuari escriurà el nom del nou ingredient al *TextBox*. El botó "Alta" està desactivat si al *TextBox* hi ha menys de 4 caràcters o si conté un nom ja existent a la llista (no admetem ingredients amb noms repetits).
+   - *ComboBox* d'unitat de mesura. Mostrarà tres valors : "uds", "ml", "g".  El botó "Alta" està desactivat si no hi ha cap unitat seleccionada.
+   - Un cop feta l'alta de l'ingredient, el *TextBox* de nom es buida, i el desplegable d'unitats es deixa sense cap opció seleccionada.
+   - *Button* "Baixa". El botó "Baixa Ing." està desactivat si no hi ha res seleccionat a la llista. S'activa quan es selecciona quelcom. Quan fem click esborra l'ingredient seleccionat.
 
 
-#### Requeriments de la Interfície gràfica per gestionar clubs
+## Gestió dels plats
 
-   - *ListBox* on es mostra el nom dels clubs.
-   - *TextBox* + *Button* "Alta". L'usuari escriurà el nom del nou club al *TextBox*. El botó "Alta" està desactivat si al *TextBox* no hi ha un mínim de 3 caràcters o si conté un nom ja existent a la llista (no admetem clubs amb noms repetits).
-   - *Button* "Baixa". El botó "Baixa" està desactivat si no hi ha res seleccionat a la llista de clubs. S'activa quan es selecciona quelcom. Quan fem click esborra el club seleccionat.
+A banda dels ingredients, podrem crear i esborrar plats de la nostra carta.
 
 
-## Gestió dels jugadors
-La classe *Jugador* conté els següents atributs:
-* NIF 
-* nom i cognoms 
-* Número de Ranking ELO (sencer entre 0 i 3000)
+La classe *Plat* conté els següents atributs:
+```c#
+        String Codi; // (en format AA0000, dos lletres i 4 xifres)
+        String Nom; // (mínim 5 lletres)
+        String Descripció; // (opcional)
+        Dictionary<Ingredient,Unitat> ingredients;
+```
 
-Un club ha de tenir 5 jugadors registrats.
+Primer es crea el plat indicant només el codi, nom i descripció, sense ingredients. Posteriorment es van afegit ingredients. 
+
+ 
 #### Requeriments d'interfície gràfica
-La informació dels jugadors es mostra en el moment que es selecciona un club (veure apartat anterior) dins d'un *ListBox*. La llista conté una línia per cada jugador, en format 
-> [NIF] - [nom] ([ELO])
+La llista de plats es mostra dins d'un *ListBox*. La llista conté una línia per cada plat, en format 
+> [Codi] - [nom] 
 
 P.ex.: 
->  11111111H - Paco León (1574)
+>  GR6666 - Truita de patates
 
-Tindrem l'opció d'eliminar un jugador mitjaçant un botó "Baixa". El botó **"Baixa"** està desactivat si no hi ha cap jugador seleccionat al *ListBox*.
+El botó **"Nou Plat"**  permetrà crear plats a partir de la informació que es recollirà en 3 *TextBox*, un pel codi, un altre pel nom i per la descripció. El *TextBox* de descripció ha de ser multilínia. El botó **"Nou Plat"** només estarà actiu si els camps compleixen les validacions.
 
-Per donar d'alta nous jugadors s'habilitaran tres *TextBox*s : NIF, nom, ranking ELO. Cal que fins que les tres dades no estiguin ben escrites, el botó **"Afegir"** no s'activi. Tampoc s'ha de permetre registrar més de 5 jugadors. Les validacions a fer són:
-- NIF correcte (format i lletra vàlida i coherent amb el número)
-- nom (mínim dos paraules, on cada paraula té un mínim de 3 lletres)
-- ranking ELO: sencer entre 0 i 3000
+Tindrem l'opció d'eliminar un plat mitjaçant un botó "Baixa Plat". El botó **"Baixa Plat"** està desactivat si no hi ha cap plat seleccionat al *ListBox*.
+
+Al costat del *ListBox* de plats tindrem un altre *ListBox* on es mostraran els ingredients del plat seleccionat al *ListBox* de plats. Si no hi ha plats seleccionats, la llista estarà buida. Per cada ingredient es mostra una línia en format 
+> [nom ingredient] [quantitat] [unitat]
+
+P.ex.:
+> Patata 4.5 Kg
 
 
-## Creació d'una lliga
-La interfície d'usuari ens oferirà un botó per crear el calendari de lliga a partir de la informació proporciona i d'una data d'inici que l'usuari podrà seleccionar en un *DatePicker*. El botó funcionarà exclusivament quan hi hagi un nombre parell de clubs (com a mínim 4), i cada club hagi registrats 5 jugadors, altrament donarà un missatge d'error explicant les condicions de creació de lliga.    
+Per afegir ingredients a un plat usarem:
+* un *ComboBox* que contindrà la llista dels noms dels ingredients.
+* un *ComboBox* que mostrarà les unitats disponiblesç
+* un *Button* per afegir l'ingredient al plat seleccionat. El botó només estarà actiu si hi ha un plat seleccionat i un ingredient i unitat seleccionades als *ComboBox*. **No permetem** repetir un mateix ingredient dos cops en el mateix plat. Tan bon punt fem click per afegir l'ingredient, apareixerà al *ListBox* d'ingredients.
 
-Una lliga consisteix en un conjunt de jornades, tantes com siguin necessaries per a que tots els clubs juguin contra tots els altres (com a visitant i com a local, dues voltes per tant). El rol de visitant i local de cada equip s'ha d'anar alternant a cada jornada. Les jornades es programen sempre en dissabte, començant pel primer dissabte que hi hagi a partir de la data seleccionada en el *DatePicker*.
 
-Per organitzar cada jornada s'emparellen els clubs, i es decideix quins jugadors d'un club juguen partida amb quins jugadors de l'altre per ordre de ranking ELO (els millors d'un equip juguen amb els millors de l'altre). A les partides s'alterna quin club juga amb les blanques. El millor jugador local sempre comença amb blanques, per tant el segon jugador local ho farà amb negres i així anar seguint.            
+
+## Creació d'un informe de compres
+Finalment, l'aplicació tindrà una *TextBlock* on es mostrarà una comanda de compres a partir dels escandalls introduïts.
+El primer pas és que l'usuari ens indiqui el nombre de comandes que espera en mitja per cada plat. A tal efecte afegirem un *Slider* que permet triar un valor sencer entre 0 i 300. Poseu un *TextBox* només de lectura al costat de l'*Slider* sincronitzat amb l'*Slider* que mostri el valor actual.
+
+Si l'usuari tria un 30, voldrà dir que s'espera fer 30 serveis de cadascun dels plat a la llista. (30 del primer, 30 del segon, etc. )
+Quan es premi el *Button* "Informe de Compres", es mostrarà en el *TextBlock* la llista de la compra que és necessària per preparar tots aquests plats. El format esperat és:
+- Carn de vedella: 23.000g
+- Daurada: 30uds.
+- Salsa de soja: 450ml
+
+*IMPORTANT*: En aquesta llista no hi ha d'haver repeticions. És possible que varis plats comparteixin alguns ingredients, i per tant cal sumar-ne les quantitats i que l'ingredient només aparegui un cop.
+
+Podeu usar un *RichTextBlock* per donar color i estil al l'informe, més info [aquí](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock?redirectedfrom=MSDN&view=winrt-20348).
+        
 
 Volem que la lliga es representi mitjançant les següents estructures de dades:
 ```c#
