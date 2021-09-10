@@ -92,8 +92,8 @@ El primer pas és que l'usuari ens indiqui el nombre de comandes que espera en m
 Si l'usuari tria un 30, voldrà dir que s'espera fer 30 serveis de cadascun dels plat a la llista. (30 del primer, 30 del segon, etc. )
 Quan es premi el *Button* "Informe de Compres", es mostrarà en el *TextBlock* la llista de la compra que és necessària per preparar tots aquests plats. El format esperat és:
 > Carn de vedella: 23.000g
-> Daurada: 30uds.
-> Salsa de soja: 450ml
+ Daurada: 30uds.
+ Salsa de soja: 450ml
 
 *IMPORTANT*: En aquesta llista no hi ha d'haver repeticions. És possible que varis plats comparteixin alguns ingredients, i per tant cal sumar-ne les quantitats i que l'ingredient només aparegui un cop.
 
