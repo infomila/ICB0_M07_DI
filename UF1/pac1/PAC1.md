@@ -1,6 +1,6 @@
 [ ... back  ](../../README.md)
 
-# Pràctica 1
+# Pràctica 1: "Le petit Chef"
 
 ## Introducció
 Volem fer una petita aplicació que ens ajudi a organitzar una lliga d'escacs. La interficie gràfica serà senzilla, i ens enfocarem sobretot a treballar les estructures de dades i la validació.
@@ -48,10 +48,13 @@ A banda dels ingredients, podrem crear i esborrar plats de la nostra carta.
 
 La classe *Plat* conté els següents atributs:
 ```c#
+public class Plat {
         String Codi; // (en format AA0000, dos lletres i 4 xifres)
         String Nom; // (mínim 5 lletres)
-        String Descripció; // (opcional)
+        String Descripcio; // (opcional)
         Dictionary<Ingredient,Unitat> ingredients;
+        ....
+}
 ```
 
 Primer es crea el plat indicant només el codi, nom i descripció, sense ingredients. Posteriorment es van afegit ingredients. 
@@ -75,10 +78,10 @@ P.ex.:
 > Patata 4.5 Kg
 
 
-Per afegir ingredients a un plat usarem:
-* un *ComboBox* que contindrà la llista dels noms dels ingredients.
-* un *ComboBox* que mostrarà les unitats disponiblesç
-* un *Button* per afegir l'ingredient al plat seleccionat. El botó només estarà actiu si hi ha un plat seleccionat i un ingredient i unitat seleccionades als *ComboBox*. **No permetem** repetir un mateix ingredient dos cops en el mateix plat. Tan bon punt fem click per afegir l'ingredient, apareixerà al *ListBox* d'ingredients.
+> Per afegir ingredients a un plat usarem:
+> * un *ComboBox* que contindrà la llista dels noms dels ingredients.
+> * un *ComboBox* que mostrarà les unitats disponiblesç
+> * un *Button* per afegir l'ingredient al plat seleccionat. El botó només estarà actiu si hi ha un plat seleccionat i un ingredient i unitat seleccionades als *ComboBox*. **No permetem** repetir un mateix ingredient dos cops en el mateix plat. Tan bon punt fem click per afegir l'ingredient, apareixerà al *ListBox* d'ingredients.
 
 
 
