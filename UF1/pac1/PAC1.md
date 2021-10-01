@@ -3,7 +3,7 @@
 # Pràctica 1: "Le petit Chef"
 
 ## Introducció
-Volem fer una petita aplicació que ens ajudi a organitzar una lliga d'escacs. La interficie gràfica serà senzilla, i ens enfocarem sobretot a treballar les estructures de dades i la validació.
+Volem fer una petita aplicació que ens ajudi a organitzar les compres d'un restaurant. A tal efecte necessitarem definr els escandalls dels plats. Ho farem a partir de la interfície descrita en els següents apartats:
 
 ![](xef.jpg)
 
@@ -80,8 +80,8 @@ P.ex.:
 
 Per afegir ingredients a un plat usarem:
 * un *ComboBox* que contindrà la llista dels noms dels ingredients.
-* un *ComboBox* que mostrarà les unitats disponiblesç
-* un *Button* per afegir l'ingredient al plat seleccionat. El botó només estarà actiu si hi ha un plat seleccionat i un ingredient i unitat seleccionades als *ComboBox*. **No permetem** repetir un mateix ingredient dos cops en el mateix plat. Tan bon punt fem click per afegir l'ingredient, apareixerà al *ListBox* d'ingredients.
+* un *TextBox* on es podrà escriure un número (sencer). 
+* un *Button* per afegir l'ingredient al plat seleccionat. El botó només estarà actiu si hi ha un plat seleccionat, un ingredient selecciont al *ComboBox* i una quantitat vàlida. **No permetem** repetir un mateix ingredient dos cops en el mateix plat. Tan bon punt fem click per afegir l'ingredient, apareixerà al *ListBox* d'ingredients.
 
 
 
