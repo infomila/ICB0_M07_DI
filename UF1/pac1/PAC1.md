@@ -53,7 +53,7 @@ public class Plat {
         String Codi; // (en format AA0000, dos lletres i 4 xifres)
         String Nom; // (mínim 5 lletres)
         String Descripcio; // (opcional)
-        Dictionary<Ingredient,Unitat> ingredients;
+        Dictionary<Ingredient,Integer> ingredients;
         ....
 }
 ```
