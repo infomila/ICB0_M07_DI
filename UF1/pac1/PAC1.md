@@ -11,7 +11,7 @@ Volem fer una petita aplicació que ens ajudi a organitzar les compres d'un rest
 ## Gestió dels ingredients
 Un ingredient representa quelcom que podem posar al plat.
 Per representar-los usarem la classe *Ingredient*, que conté només un atribut *nom*, i un atribut *unitat* ( de tipus enumeració, amb els valors UDS, ML, G ).
-La classe *Ingredient* seria:
+La classe *Ingredient*, per tant, seria:
 ```c#
         String Nom; // (mínim 4 lletres)
         Unitat unitat;
@@ -39,6 +39,7 @@ Les operacions disponibles són:
    - *ComboBox* d'unitat de mesura. Mostrarà tres valors : "uds", "ml", "g".  El botó "Alta" està desactivat si no hi ha cap unitat seleccionada.
    - Un cop feta l'alta de l'ingredient, el *TextBox* de nom es buida, i el desplegable d'unitats es deixa sense cap opció seleccionada.
    - *Button* "Baixa". El botó "Baixa Ing." està desactivat si no hi ha res seleccionat a la llista. S'activa quan es selecciona quelcom. Quan fem click esborra l'ingredient seleccionat.
+   **COMPTE**: No hem de poder esborrar un ingredient que s'està fent servir a un plat !
 
 
 ## Gestió dels plats
