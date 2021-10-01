@@ -9,9 +9,9 @@ Volem fer una petita aplicació que ens ajudi a organitzar les compres d'un rest
 
 
 ## Gestió dels ingredients
-Els clubs són les entitats que s'enfronten a les lligues.
+Un ingredient representa quelcom que podem posar al plat.
 Per representar-los usarem la classe *Ingredient*, que conté només un atribut *nom*, i un atribut *unitat* ( de tipus enumeració, amb els valors UDS, ML, G ).
-La classe *Plat* conté els següents atributs:
+La classe *Ingredient* seria:
 ```c#
         String Nom; // (mínim 4 lletres)
         Unitat unitat;
